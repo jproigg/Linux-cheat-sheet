@@ -7,19 +7,20 @@
 
 | No. | Topic                                                                   |
 | --- | ----------------------------------------------------------------------- |
-| 1   | [**User information**](#user-information)                               |
-| 2   | [**File and directory commands**](#file-and-directory-commands)         |
-| 3   | [**File permissions**](#file-permissions)                               |
-| 4   | [**Networking**](#networking)                                           |
-| 5   | [**Package Management**](#package-management)                         |
-| 6   | [**Disk usage**](#disk-usage)                                           |
-| 7   | [**System and Hardware information**](#system-and-hardware-information) |
-| 8   | [**Search Files**](#search-files)                                       |
-| 9   | [**SSH**](#ssh)                                                         |
-| 10  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
+| 1   | [**User Management**](#user-management)                               |
+| 2  | [**User Groups**](#user-groups)                               |
+| 3   | [**File and directory commands**](#file-and-directory-commands)         |
+| 4   | [**File permissions**](#file-permissions)                               |
+| 5   | [**Networking**](#networking)                                           |
+| 6   | [**Package Management**](#package-management)                         |
+| 7   | [**Disk usage**](#disk-usage)                                           |
+| 8   | [**System and Hardware information**](#system-and-hardware-information) |
+| 9   | [**Search Files**](#search-files)                                       |
+| 10   | [**SSH**](#ssh)                                                         |
+| 11  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
 
 
-### User Information
+### User Management
 
 1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
 
@@ -256,12 +257,67 @@
     userdel <username>
     ```
 
-    * By defaukt, the home directory of the user is not deleted. To delete it use:
+    * By default, the home directory of the user is not deleted. To delete it use:
 
     ```cmd
     sudo userdel -r <username>
     ```
 
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### User Groups
+
+1. **Group Add:** A new group can be created and users can be made part of it.
+
+    ```cmd
+    groupadd <options> <groupname>
+    ```
+
+    Options for groupadd:
+
+    ```cmd
+    -f: Exit successfully if the group already exists
+    ```
+    ```cmd
+    -g: Use GID for the new group
+    ```
+    ```cmd
+    -p: use this password for the new group
+    ```
+    ```cmd
+    -k: override /etc/login.defs defaults
+    ```   
+
+2. **Group Modification:** Used to modify the users accesing the group or the group details.
+
+    ```cmd
+    groupmod <options> <groupname>
+    ```
+
+    Options for groupmod:
+
+    ```cmd
+    -g: Changes the group id.
+    ```
+    ```cmd
+    -p: Changes group password.
+    ```
+    ```cmd
+    -A: Adds a user account to the group
+    ```
+    ```cmd
+    -R: Removes a user account from the group
+    ```
+    ```cmd
+    -n: changes the name of the group
+    ```    
+
+2. **Group Deletion:** 
+
+    ```cmd
+    groupdel <groupname>
+    ```
 
 **[⬆ Back to Top](#table-of-contents)**
 
