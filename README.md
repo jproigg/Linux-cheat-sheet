@@ -8,7 +8,7 @@
 | No. | Topic                                                                   |
 | --- | ----------------------------------------------------------------------- |
 | 1   | [**User Management**](#user-management)                               |
-| 2  | [**User Groups**](#user-groups)                               |
+| 2  | [**User Group Management**](#user-groups)                               |
 | 3   | [**File and directory commands**](#file-and-directory-commands)         |
 | 4   | [**File permissions**](#file-permissions)                               |
 | 5   | [**Networking**](#networking)                                           |
