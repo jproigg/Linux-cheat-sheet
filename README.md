@@ -128,9 +128,142 @@
     news                                       **Never logged in**
     ```
 
-11. **:** 
+11. **Add root user password:**
 
-   **[⬆ Back to Top](#table-of-contents)**
+    ```cmd
+    sudo passwd root
+    ```
+12. **Switch User**
+
+    ```cmd
+    su <options> <username>
+    ```
+
+* If username not provided, it takes root by default
+* Once the command is given it will ask for password, when the password is provided it opens the shell for that user
+* Type "exit" to return back to original user
+* Root doesn't require password to switch to the other users
+
+13. **Sudo - super user do:**
+
+    To give sudo permission use:
+
+    ```cmd
+    sudo gpasswd -a <username> sudo
+    ```
+
+    To remove sudo permission use:
+
+    ```cmd
+    sudo gpasswd -d <username> sudo
+    ```
+
+* By default it is root if user is not mentioned.
+* Permission for sudo access is stores in /etc/sudoers
+* By default new users don't havee sudo permission.
+
+14. **Add a new User:**
+
+    Create user without home directory:
+
+    ```cmd
+    sudo useradd <username> 
+    ```
+
+    Create user with a home directory:
+
+    ```cmd
+    sudo useradd -m <username> 
+    ```
+
+    Create user with a predifined home directory:
+
+    ```cmd
+    sudo useradd -m -d /home/ubuntu/user <username> 
+    ```
+    Create user with expiry date:
+
+    ```cmd
+    sudo useradd -m -e <yyyy-mm-dd> <username> 
+    ```
+
+    Options for useradd:
+
+    ```cmd
+    -c: Includes user's full name
+    ```
+    ```cmd
+    -e: specifies date when user will be disabled
+    ```
+    ```cmd
+    -g: specifies user's default group
+    ```
+    ```cmd
+    -G: Specifies which groups to add user to
+    ```
+    ```cmd
+    -m: Includes user's home directory
+    ```
+    ```cmd
+    -d: specifies predefined home directory
+    ```
+    ```cmd
+    -p: specifies user's passwoed
+    ```
+    ```cmd
+    -s: specifies user's shell 
+    ```
+
+15. **Modify a User:**
+
+    ```cmd
+    sudo usermod <options> <username>
+    ```
+    Options for usermod:
+
+    ```cmd
+    -c: Includes user's full name
+    ```
+    ```cmd
+    -e: specifies date when user will be disabled
+    ```
+    ```cmd
+    -g: specifies user's default group
+    ```
+    ```cmd
+    -G: Specifies which groups to add user to
+    ```
+    ```cmd
+    -m: Includes user's home directory
+    ```
+    ```cmd
+    -p: specifies user's passwoed
+    ```
+    ```cmd
+    -s: specifies user's shell 
+    ```   
+
+16. **Change Password:**
+
+    ```cmd
+    sudo passwd <username>
+    ```
+
+
+16. **Delete User:**
+
+    ```cmd
+    userdel <username>
+    ```
+
+    * By defaukt, the home directory of the user is not deleted. To delete it use:
+
+    ```cmd
+    sudo userdel -r <username>
+    ```
+
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ### File and directory commands
 
