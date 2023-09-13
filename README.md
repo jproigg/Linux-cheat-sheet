@@ -698,6 +698,8 @@ sudo chgrp Administrator test.txt
 
 ### Networking
 
+Refer [Here](https://mindmajix.com/linux-networking-commands-best-examples) to review the top linux networking commands.
+
 1.  **Display network information:** `ifconfig` command is used to display all network information(ip address, ports etc)
 
 ```cmd
@@ -721,6 +723,7 @@ ifconfig -a
     ip addr show
     ```
 
+
 4.  **Active ports:** Shows active or listening ports
 
      ```cmd
@@ -735,6 +738,31 @@ ifconfig -a
     Example:
     whois google.com
     ```
+
+6. **Ip command:** The ip command can show address information, manipulate routing, plus display network various devices, interfaces, and tunnels.
+    ```cmd
+    ip <options><object><command>
+    ip help (to review all the objects)
+    ```
+
+7. **mtr command:** MTR (Matt's traceroute) is a program with a command-line interface that serves as a network diagnostic and troubleshooting tool. This command combines the functionality of the ping and traceroute commands.
+
+    ```cmd
+    mtr <options><hostname/IP>
+    ```
+8. **netstat command:** The netstat tool for printing network connections, routing tables, interface statistics, masquerade connections, and multicast memberships. This utility is part of the net-tool package
+
+    ```cmd
+    netstat
+    ```
+9. **nslookup command:** Use the nslookup utility to query Internet name servers interactively. Use it to perform DNS queries and receive domain names or IP addresses, or any other specific DNS records.
+
+    ```cmd
+    nslookkup <hostname>
+    ```
+
+
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
