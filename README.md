@@ -11,13 +11,14 @@
 | 2  | [**User Group Management**](#user-groups)                               |
 | 3   | [**File and directory commands**](#file-and-directory-commands)         |
 | 4   | [**File permissions**](#file-permissions)                               |
-| 5   | [**Networking**](#networking)                                           |
-| 6   | [**Package Management**](#package-management)                         |
-| 7   | [**Disk usage**](#disk-usage)                                           |
-| 8   | [**System and Hardware information**](#system-and-hardware-information) |
-| 9   | [**Search Files**](#search-files)                                       |
-| 10   | [**SSH**](#ssh)                                                         |
-| 11  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
+| 5  | [**Processes**](#process-management)                               |
+| 6   | [**Networking**](#networking)                                           |
+| 7   | [**Package Management**](#package-management)                         |
+| 8   | [**Disk usage**](#disk-usage)                                           |
+| 9   | [**System and Hardware information**](#system-and-hardware-information) |
+| 10   | [**Search Files**](#search-files)                                       |
+| 11   | [**SSH**](#ssh)                                                         |
+| 12  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
 
 
 ### User Management
@@ -586,6 +587,112 @@ chgrp group_name filename
 Example:
 sudo chgrp Administrator test.txt
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Process Management
+
+1.  **PS command:** Process status is used to check information related to various process running on system (Process Monitoring)
+
+    ```cmd
+    ps <options>
+    ```
+
+    Options for ps command:
+
+    ```cmd
+    -e: Displays every active process
+    ```
+    ```cmd
+    -f: Displays full format list for the process
+    ```
+    ```cmd
+    -x: Displays all processes owned by the owner
+    ```
+    ```cmd
+    -r: Displays all running processes
+    ```
+    ```cmd
+    -T: display all processes associated with the current terminal
+    ```    
+    ```cmd
+    -g: displays all processes owned by the particular group
+    ```    
+    ```cmd
+    -p: display process by particular PID
+    ``` 
+    ```cmd
+    -forest: display how processes are linked to each other
+    ```       
+
+2.  **Top:** The command shows the processor and memorry being used by the system
+
+    ```cmd
+    top
+    ```
+
+    Options for top command:
+
+     ```cmd
+    -u: append option to display specific user process details
+    ```
+    ```cmd
+    c: press 'c' button to view absolute path of the process
+    ```
+    ```cmd
+    d: press 'd' button to change the screen refresh interval
+    ```
+    ```cmd
+    shif+p: to sort based on CPU utilization
+    ```
+    ```cmd
+    -n: to limit number of iteration
+    ```    
+    ```cmd
+    q: to exit window
+    ```    
+
+3.  **Kill:** Used to terminate a particular process
+
+    ```cmd
+    kill <option> <PID>
+    ```   
+    Options for kill command:
+
+     ```cmd
+    SIGHUP: numeric value 1, hagns the process (-1)
+    ```
+    ```cmd
+    SIGKILL: numeric value 0, kills the process without saving (-9)
+    ```
+    ```cmd
+    SIGTERM: numeric value 15, terminates the process (-15)
+    ```  
+
+    * Run 'ps' to find the process id or use command 'pidof'
+
+        ```cmd
+        pidof mysql
+        ```  
+
+4.  **bg command:** Starts running suspended process in the background.
+
+    ```cmd
+    bg
+    ```  
+
+4.  **fg command:** Brings the suspended or the background running process to the foreground
+
+    ```cmd
+    fg
+    ```  
+
+4.  **jobs command:** Display the status of jons in the current shell.
+
+    ```cmd
+    jobs
+    ```  
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
